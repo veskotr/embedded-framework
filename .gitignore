@@ -1,0 +1,56 @@
+# ================================================
+# Build directories
+# ================================================
+build*/
+cmake-build*/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+*.dir/
+*.VC.db
+*.VC.VC.opendb
+*.sln
+*.user
+*.ipch
+*.pdb
+
+# ================================================
+# Executables / libraries
+# ================================================
+*.exe
+*.out
+*.elf
+*.bin
+*.hex
+*.dll
+*.so
+*.a
+*.lib
+
+# ================================================
+# IDE / Editor
+# ================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+*.log
+
+# ================================================
+# Temporary / OS files
+# ================================================
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+
+# ================================================
+# Python / Scripts (optional)
+# ================================================
+__pycache__/
+*.pyc

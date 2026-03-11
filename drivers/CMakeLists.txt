@@ -1,0 +1,6 @@
+if(USE_GPIO)
+    add_subdirectory(gpio)
+endif()
+if(USE_UART)
+    add_subdirectory(uart)
+endif()

@@ -1,0 +1,3 @@
+add_library(hss_gpio_driver STATIC hss_gpio.c)
+target_include_directories(hss_gpio_driver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(hss_gpio_driver PUBLIC hss_platform)
