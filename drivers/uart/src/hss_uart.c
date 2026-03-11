@@ -1,4 +1,4 @@
-#include "hss_uart_platform.h"
+#include "hss_platform_uart.h"
 
 hss_error_t uart_init(int port, const uart_config_t *cfg, const uart_platform_ext_t *ext)
 {

@@ -1,5 +1,5 @@
 // platform/esp32/uart_platform.c
-#include "hss_uart_platform.h"
+#include "hss_platform_uart.h"
 #include <stdio.h>
 
 hss_error_t uart_init_hw(int port, const uart_config_t *cfg, const uart_platform_ext_t *ext)
