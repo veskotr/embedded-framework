@@ -1,12 +1,8 @@
-#include "hss_board.h"
 #include "hss_gpio.h"
 #include "hss_uart.h"
 
 int main(void)
 {
-    board_init();
-    gpio_init();
-    gpio_set(LED_PIN, 1);
 
     uart_config_t cfg = {
         .baud_rate = 115200,

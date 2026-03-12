@@ -1,5 +1,8 @@
 #pragma once
 
+#include "hss_gpio_types.h"
+#include "hss_error.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
