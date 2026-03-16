@@ -1,6 +1,3 @@
-cmake_minimum_required(VERSION 4.3.0)
-project(hss_platform LANGUAGES C)
-
 # Select platform sources
 if(PLATFORM_WINDOWS)
     message(STATUS "Building for Windows")

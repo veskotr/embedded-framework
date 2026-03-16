@@ -1,0 +1,48 @@
+menu "FreeRTOS Kernel Configuration"
+
+config PROCESSOR_FREQ_HZ
+    int "Processor Frequency (Hz)"
+    default 1000000
+    help
+      The frequency of the processor clock. This is used to calculate timing parameters.
+
+# Port selection
+config FREERTOS_PORT
+    string "FreeRTOS Port"
+    default "MSVC_MINGW"
+    help
+      Select the FreeRTOS kernel port to build.
+
+# Heap selection (maps to FREERTOS_HEAP in CMake)
+config FREERTOS_HEAP
+    int "Heap Implementation"
+    default 4
+    help
+      Choose heap implementation:
+        1 = heap_1.c
+        2 = heap_2.c
+        3 = heap_3.c
+        4 = heap_4.c
+        5 = heap_5.c
+
+# Preemption
+config FREERTOS_USE_PREEMPTION
+    bool "Use Preemption"
+    default y
+
+# Tick rate
+config FREERTOS_TICK_RATE_HZ
+    int "Tick Rate (Hz)"
+    default 1000
+
+# Max priorities
+config FREERTOS_MAX_PRIORITIES
+    int "Max Priorities"
+    default 5
+
+# Minimal stack size
+config FREERTOS_MINIMAL_STACK_SIZE
+    int "Minimal Stack Size"
+    default 128
+
+endmenu

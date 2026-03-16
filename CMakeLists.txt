@@ -10,6 +10,7 @@ option(USE_GPIO "Enable GPIO driver" ON)
 option(USE_UART "Enable UART driver" ON)
 
 # Add modules
+add_subdirectory(freertos)
 add_subdirectory(common)
 add_subdirectory(platform)
 add_subdirectory(drivers)

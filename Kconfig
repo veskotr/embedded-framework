@@ -1,0 +1,11 @@
+menu
+# Example root option: select the target platform
+config PLATFORM
+    string "Target platform"
+    default "MSVC_MINGW"
+    help
+      The platform to build for (POSIX / Windows / STM32 / etc.)
+
+source "freertos/Kconfig"
+
+endmenu
