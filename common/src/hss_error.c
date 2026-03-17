@@ -1,7 +1,7 @@
 #include "hss_error.h"
 
 static const char* COMMON_ERR_STRINGS[] = {
-    [HSS_ERROR_OK]        = "OK",
+    [HSS_OK]        = "OK",
     [HSS_ERROR_GENERIC]   = "Generic error",
     [HSS_ERROR_INVALID_ARG] = "Invalid argument",
     [HSS_ERROR_TIMEOUT]   = "Timeout",
@@ -18,5 +18,5 @@ const char* common_err_to_str(hss_error_t err) {
 
 bool hss_is_ok(hss_error_t err)
 {
-    return err.code == HSS_ERROR_OK;
+    return err.code == HSS_OK;
 }

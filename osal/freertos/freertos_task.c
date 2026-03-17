@@ -72,9 +72,13 @@ hss_error_t osal_task_notify_give(osal_task_t task)
 hss_error_t osal_task_notify_give_from_isr(osal_task_t task)
 {
     if (!task) return (hss_error_t){.code = HSS_ERROR_INVALID_ARG, .platform_code = 0};
+
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+
     BaseType_t res = xTaskNotifyGiveFromISR((TaskHandle_t)task, &xHigherPriorityTaskWoken);
+
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+    
     return (res == pdFAIL) ? (hss_error_t){.code = HSS_ERROR_GENERIC, .platform_code = 0} : (hss_error_t){.code = HSS_OK, .platform_code = 0};
 }
 

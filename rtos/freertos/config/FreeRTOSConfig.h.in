@@ -1,8 +1,17 @@
 #pragma once
 
-#define configCPU_CLOCK_HZ        @CPU_CLOCK_HZ@
-#define configUSE_PREEMPTION      @USE_PREEMPTION@
-#define configTICK_RATE_HZ        @TICK_RATE_HZ@
-#define configMAX_PRIORITIES      @MAX_PRIORITIES@
-#define configMINIMAL_STACK_SIZE  @MINIMAL_STACK_SIZE@
-#define configTOTAL_HEAP_SIZE     @TOTAL_HEAP_SIZE@
+#define configCPU_CLOCK_HZ @CPU_CLOCK_HZ@
+#define configUSE_PREEMPTION @USE_PREEMPTION@
+#define configTICK_RATE_HZ @TICK_RATE_HZ@
+#define configTICK_TYPE_WIDTH_IN_BITS @TICK_TYPE_WIDTH_IN_BITS@
+#define configMAX_PRIORITIES @MAX_PRIORITIES@
+#define configMINIMAL_STACK_SIZE @MINIMAL_STACK_SIZE@
+#define configTOTAL_HEAP_SIZE @TOTAL_HEAP_SIZE@
+
+#define configUSE_IDLE_HOOK @USE_IDLE_HOOK@
+#define configUSE_TICK_HOOK @USE_TICK_HOOK@
+#define INCLUDE_vTaskDelay @INCLUDE_vTaskDelay@
+#define INCLUDE_vTaskSuspend @INCLUDE_vTaskSuspend@
+#define INCLUDE_xTaskNotifyGive @INCLUDE_xTaskNotifyGive@
+#define INCLUDE_xTaskNotifyTake @INCLUDE_xTaskNotifyTake@
+#define INCLUDE_xTaskResumeFromISR @INCLUDE_xTaskResumeFromISR@

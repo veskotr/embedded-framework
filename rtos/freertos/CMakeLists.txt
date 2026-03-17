@@ -7,7 +7,10 @@ configure_file(
 )
 
 add_library(freertos_config INTERFACE)
-target_include_directories(freertos_config INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/freertos/config)
+target_include_directories(freertos_config INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/config)
+
+# Let FreeRTOS-Kernel CMake find the generated FreeRTOSConfig.h.
+set(FREERTOS_CONFIG_FILE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/config)
 
 FetchContent_Declare(
     freertos_kernel

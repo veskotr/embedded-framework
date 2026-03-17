@@ -3,14 +3,21 @@ project(hss_framework C)
 
 set(CMAKE_C_STANDARD 11)
 
-include(configs/rtos/freeRTOS/freertos_defaults.cmake)
-
 # Options / unified properties
 option(PLATFORM_WINDOWS "Build for Windows platform" ON)
 option(PLATFORM_SIM "Use native simulation" ON)
 option(USE_GPIO "Enable GPIO driver" ON)
 option(USE_UART "Enable UART driver" ON)
 option(OS_FREERTOS_GENERIC "Enable freeRTOS support" ON)
+option(OS_FREERTOS_ESP32 "Enable ESP32 FreeRTOS support" OFF)
+
+if(PLATFORM_WINDOWS)
+	include(configs/platform/windows.cmake)
+endif()
+
+if(OS_FREERTOS_GENERIC)
+	include(configs/rtos/freeRTOS/freertos_defaults.cmake)
+endif()
 
 # Add modules
 add_subdirectory(rtos)

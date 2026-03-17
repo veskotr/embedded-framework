@@ -22,10 +22,10 @@ cmake --build $BuildDir --config $Config
 Write-Output $BuildDir
 
 # Step 3: Determine executable path
-$ExePath = Join-Path $BuildDir "/app/Debug/app.exe"
+$ExePath = Join-Path -Path $BuildDir -ChildPath "app/$Config/app.exe"
 if (-Not (Test-Path $ExePath)) {
     # Some setups place it in Debug folder for MSVC
-    $ExePath = Join-Path $BuildDir $Config "app.exe"
+    $ExePath = Join-Path -Path $BuildDir -ChildPath "$Config/app.exe"
 }
 
 if (-Not (Test-Path $ExePath)) {
