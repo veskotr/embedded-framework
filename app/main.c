@@ -1,5 +1,6 @@
 #include "hss_gpio.h"
 #include "hss_uart.h"
+#include "hss_osal_task.h"
 
 int main(void)
 {

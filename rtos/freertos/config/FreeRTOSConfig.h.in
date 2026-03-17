@@ -1,0 +1,8 @@
+#pragma once
+
+#define configCPU_CLOCK_HZ        @CPU_CLOCK_HZ@
+#define configUSE_PREEMPTION      @USE_PREEMPTION@
+#define configTICK_RATE_HZ        @TICK_RATE_HZ@
+#define configMAX_PRIORITIES      @MAX_PRIORITIES@
+#define configMINIMAL_STACK_SIZE  @MINIMAL_STACK_SIZE@
+#define configTOTAL_HEAP_SIZE     @TOTAL_HEAP_SIZE@

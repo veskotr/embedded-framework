@@ -21,7 +21,7 @@ hss_error_t hss_platform_gpio_init(const hss_gpio_config_t *cfg)
     printf("[SIM] Initialized GPIO pin %d as %s\n", cfg->pin, 
         cfg->direction == HSS_GPIO_DIR_INPUT ? "INPUT" : "OUTPUT");
 
-    return (hss_error_t){.code = HSS_ERROR_OK, .platform_code = 0};
+    return (hss_error_t){.code = HSS_OK, .platform_code = 0};
 }
 
 hss_error_t hss_platform_gpio_deinit(int pin)
@@ -39,7 +39,7 @@ hss_error_t hss_platform_gpio_deinit(int pin)
 
     printf("[SIM] Deinitialized GPIO pin %d\n", pin);
 
-    return (hss_error_t){.code = HSS_ERROR_OK, .platform_code = 0};
+    return (hss_error_t){.code = HSS_OK, .platform_code = 0};
 }
 
 hss_error_t hss_platform_gpio_write(int pin, hss_gpio_level_t level)
@@ -54,7 +54,7 @@ hss_error_t hss_platform_gpio_write(int pin, hss_gpio_level_t level)
     printf("[SIM] GPIO pin %d set to %s\n", pin, 
         level == HSS_GPIO_LEVEL_LOW ? "LOW" : "HIGH");
 
-    return (hss_error_t){.code = HSS_ERROR_OK, .platform_code = 0};
+    return (hss_error_t){.code = HSS_OK, .platform_code = 0};
     
 }
 
@@ -70,7 +70,7 @@ hss_error_t hss_platform_gpio_read(int pin, hss_gpio_level_t *level)
     printf("[SIM] GPIO pin %d read as %s\n", pin, 
         *level == HSS_GPIO_LEVEL_LOW ? "LOW" : "HIGH");
 
-    return (hss_error_t){.code = HSS_ERROR_OK, .platform_code = 0};
+    return (hss_error_t){.code = HSS_OK, .platform_code = 0};
 }
 
 // --- API: batch initialization ---
@@ -81,5 +81,5 @@ hss_error_t hss_platform_gpio_init_batch(const hss_gpio_config_t *cfg_array, siz
             return err;
         }
     }
-    return (hss_error_t){.code = HSS_ERROR_OK, .platform_code = 0};
+    return (hss_error_t){.code = HSS_OK, .platform_code = 0};
 }

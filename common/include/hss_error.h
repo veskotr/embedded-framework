@@ -9,7 +9,7 @@ extern "C"
 #endif
     typedef enum
     {
-        HSS_ERROR_OK = 0,
+        HSS_OK = 0,
         HSS_ERROR_GENERIC,
         HSS_ERROR_INVALID_ARG,
         HSS_ERROR_INVALID_STATE,

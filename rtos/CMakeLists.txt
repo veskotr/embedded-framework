@@ -1,0 +1,5 @@
+if(OS_FREERTOS_GENERIC)
+    add_subdirectory(freertos)
+elseif(OS_FREERTOS_ESP32)
+    add_subdirectory(esp_idf_rtos)
+endif()
